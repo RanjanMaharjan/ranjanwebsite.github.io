@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <section class="header">
+       <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+       
+        <div class="nav-links">
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="Aboutus.html">About us</a></li>
+            <li> <a href="course.html">Course</a></li>
+            <li> <a href="routine.html">Routine</a></li>
+            <li> <a href="contactus.html">Contact Us</a></li>
+        </ul>
+        </div>
+       </nav> 
+
+       <!-- course-select  -->
+       <div class="course">
+        <div class="selector">
+            <div id="selectorField">
+                <p id="selectorText">Select Desired Course</p>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+
+            <ul id="list" class="hide">
+                <li class="options"> <a href="BIT.html"> BIT </a>
+                
+                </li>
+
+                 <li class="options">
+                    <li class="options"> <a href="BHM.HTML"> BHM </a>
+                 </li>
+                
+                 <li class="options">
+                    <li class="options"> <a href="BCA.html"> BCA </a>
+                 </li>
+
+                 <li class="options">
+                    <li class="options"> <a href="BTECH.html"> B.Tech </a>
+                 </li>
+            </ul>
+        </div>
+       </div>
+
+       <script>
+
+        var selectorField= document.getElementById("selectorField");
+        var selectorText= document.getElementById("selectorText");
+        var options =document.getElementsByClassName("options");
+        var list =document.getElementById("list");
+
+        selectorField.onclick= function(){
+            list.classList.toggle("hide");
+        }
+
+        for(option of options){
+            option.onclick =function(){
+                selectorText.innerHTML= this.textContent;
+                list.classList.toggle("hide");
+            }
+        }
+       </script>
+
+    
+    
+</body>
+</html>
